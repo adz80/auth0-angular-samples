@@ -1,0 +1,11 @@
+{
+    "domain": "dev-tsyfsxtt.us.auth0.com",
+    "clientId": "aBXsotIHYnk8zCBn9NEANk2K1rygHJYr",
+    "authorizationParams": {
+      "audience": "https://api-auth0.chewbacca.dev"
+    },
+    "apiUri": "https://api-auth0.chewbacca.dev",
+    "appUri": "https://auth0.chewbacca.dev",
+    "errorPath": "/error"
+}
+  
