@@ -20,6 +20,6 @@ services:
       
       - "traefik.http.services.auth0-api.loadbalancer.server.port=3001"
       - "traefik.http.routers.auth0-api.tls=true"      
-  networks:
-    traefik-public:
-      external: true
+networks:
+  traefik-public:
+    external: true
