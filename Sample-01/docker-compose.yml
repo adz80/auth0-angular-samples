@@ -12,8 +12,8 @@ services:
     labels:
       - "traefik.enable=true"
       
-      - "traefik.http.routers.auth0.rule=Host(`auth0.chewbacca.dev`)"
-      - "traefik.http.routers.auth0-api.rule=Host(`api-auth0.chewbacca.dev`)"
+      - "traefik.http.routers.auth0.rule=Host(`auth0.local.chewbacca.dev`)"
+      - "traefik.http.routers.auth0-api.rule=Host(`api-auth0.local.chewbacca.dev`)"
       
       - "traefik.http.services.auth0.loadbalancer.server.port=4200"
       - "traefik.http.routers.auth0.tls=true"      
