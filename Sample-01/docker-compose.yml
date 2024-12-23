@@ -16,7 +16,7 @@ services:
       
       - "traefik.http.routers.auth0.entrypoints=https"
       - "traefik.http.routers.auth0.rule=Host(`auth0.chewbacca.dev`)"
-      - "traefik.http.routers.auth0.service=web"
+      - "traefik.http.routers.auth0.service=auth0"
       - "traefik.http.routers.auth0.tls=true"  
       - "traefik.http.services.auth0.loadbalancer.server.port=4200"      
 
@@ -24,7 +24,7 @@ services:
 
       - "traefik.http.routers.auth0-api.entrypoints=https"
       - "traefik.http.routers.auth0-api.rule=Host(`api-auth0.chewbacca.dev`)"
-      - "traefik.http.routers.auth0-api.service=api"
+      - "traefik.http.routers.auth0-api.service=auth0-api"
       - "traefik.http.routers.auth0-api.tls=true"  
       - "traefik.http.services.auth0-api.loadbalancer.server.port=3001"
     
