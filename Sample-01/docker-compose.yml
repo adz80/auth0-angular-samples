@@ -1,0 +1,25 @@
+services:
+  auth0:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+      - "3001:3001"
+    networks:
+      - traefik-public
+    
+    labels:
+      - "traefik.enable=true"
+      
+      - "traefik.http.routers.auth0.rule=Host(`auth0.chewbacca.dev`)"
+      - "traefik.http.routers.auth0-api.rule=Host(`api-auth0.chewbacca.dev`)"
+      
+      - "traefik.http.services.auth0.loadbalancer.server.port=4200"
+      - "traefik.http.routers.auth0.tls=true"      
+      
+      - "traefik.http.services.auth0-api.loadbalancer.server.port=3001"
+      - "traefik.http.routers.auth0-api.tls=true"      
+  networks:
+    traefik-public:
+      external: true
